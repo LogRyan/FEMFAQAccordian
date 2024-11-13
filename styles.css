@@ -1,0 +1,218 @@
+/* CSS RESET */
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+	margin: 0;
+}
+
+body {
+	/* 3. Add accessible line-height */
+	line-height: 1.5;
+	/* 4. Improve text rendering */
+	-webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+	text-wrap: wrap;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-wrap: wrap;
+}
+
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+	isolation: isolate;
+}
+
+/* END CSS RESET */
+
+/* STYLES */
+
+:root {
+	--white: hsl(0, 0%, 100%);
+	--light-pink: hsl(275, 100%, 97%);
+	--grey-purple: hsl(292, 16%, 49%);
+	--dark-purple: hsl(292, 42%, 14%);
+}
+
+body {
+	font-family: Work Sans;
+	margin: auto;
+	align-content: center;
+	min-width: 150px;
+	width: 100%;
+	max-width: 1440px;
+	background: url(assets/images/background-pattern-desktop.svg);
+	background-size: 100vw;
+	background-repeat: no-repeat;
+	background-color: var(--light-pink);
+}
+
+h1.title {
+	display: none;
+}
+
+#faqAccordian {
+	width: 95%;
+	min-width: 375px;
+	padding: 5vh 1rem;
+	margin: 5% auto;
+	align-self: center;
+}
+
+div.accordianContainer {
+	margin: auto;
+	width: 100%;
+	max-width: 600px;
+	padding: 1rem;
+	border-radius: 1rem;
+	background-color: var(--white);
+}
+
+div.titleContainer {
+	display: flex;
+	justify-content: flex-start;
+}
+
+h2 {
+	margin: auto .25rem;
+	font-size: calc(2em + 1vw);
+	font-weight: 700;
+}
+
+.titleSvg {
+	height: calc(1em + 1vw);
+	align-self: center;
+}
+
+article {
+	min-width: fit-content;
+	width: 100%;
+}
+
+div.articleTitle {
+	margin: 1em 0;
+	display: flex;
+	cursor: pointer;
+}
+
+div.articleTitle:hover {
+	color: var(--grey-purple);
+}
+
+div.articleTitle h3 {
+	width: 100%;
+	color: var(--dark-purple);
+	font-weight: 600;
+}
+
+div.articleTitle h3:hover {
+	color: var(--grey-purple);
+}
+
+div.svgContainer {
+	width: 15%;
+	display: flex;
+	justify-content: center;
+}
+
+div.svgContainer svg {
+	align-self: center;
+}
+
+svg.active {
+	display: flex;
+}
+
+svg.inactive {
+	display: none;
+}
+
+article p {
+	width: 95%;
+	font-size: 1em;
+	font-weight: 400;
+	color: var(--grey-purple);
+}
+
+p.active {
+	display: block;
+}
+
+p.inactive {
+	display: none;
+}
+
+footer {
+	margin: auto;
+	width: fit-content;
+}
+
+.attribution {
+	font-size: 1em;
+	text-align: center;
+}
+
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 450px) {
+	body {
+		background: url(assets/images/background-pattern-mobile.svg);
+		background-size: auto 100vw;
+		background-repeat: no-repeat;
+	}
+}
+
+/* END QUERIES */
+
+/* END STYLES */
